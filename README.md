@@ -19,6 +19,24 @@ romion_sim/
 ├── README.md
 ├── requirements.txt
 
+romion_sim/
+├── core/
+│   ├── engine.py
+│   ├── topology.py
+│   ├── metrics.py
+│   ├── config.py
+├── io/
+│   ├── exporter.py
+│   ├── logger.py
+│   ├── simulator.py
+├── data/
+│   ├── test_vectors.json
+├── run_sim.py
+├── README.md
+├── requirements.txt
+├── LICENSE
+├── .gitignore
+
 ---
 
 ## 🔧 Wymagania
