@@ -1,0 +1,5 @@
+[
+    {"grad_warp": 1.2e-17, "sigma_c": 2.0, "event_type": "meta_foton"},
+    {"grad_warp": 9.71e-18, "sigma_c": 1.6094, "event_type": "meta_foton"},
+    {"grad_warp": 1.5e-17, "sigma_c": 2.5, "event_type": "meta_WZ"}
+]
