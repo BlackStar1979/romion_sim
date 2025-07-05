@@ -8,8 +8,11 @@ def main():
     parser.add_argument('--steps', type=int, default=100, help='Liczba kroków')
     parser.add_argument('--output', type=str, default='romion_sim_results.csv', help='Plik wyjściowy')
     args = parser.parse_args()
-    results = run_simulation(args.grad_warp, args.sigma_c, args.steps)
-    print(results.head())
+    try:
+        results = run_simulation(args.grad_warp, args.sigma_c, args.steps)
+        print(results.head())
+    except Exception as e:
+        print(f"Błąd: {e}")
 
 if __name__ == "__main__":
     main()
