@@ -5,19 +5,6 @@ Symulator przeskoków topologicznych Δ w hipergrafie romionowym, modelujący tr
 ---
 
 ## 📦 Struktura katalogów
-romion_sim/
-  ├── core/
-  │   ├── engine.py
-  │   ├── topology.py
-  │   ├── metrics.py
-  │   └── config.py
-  ├── io/
-  │   ├── exporter.py
-  │   ├── logger.py
-  │   └── simulator.py
-  ├── run_sim.py
-  ├── README.md
-  ├── requirements.txt
 
 romion_sim/
 ├── core/
