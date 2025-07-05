@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{amsmath, hyperref}
+\title{Topologia Istnienia: ROMION jako relacyjny substrat rzeczywistości}
+\author{}
+\begin{document}
+\maketitle
+\section{Aksjomaty}
+\begin{enumerate}
+    \item Byt = zbiór relacji $\Delta$ w hipergrafie $H = (V, E, \Delta)$.
+    \item Istnienie wymaga $\Sigma_c \geq 1.6094$.
+    \item Collapse $\Delta \to \Delta_\emptyset$ odpowiada zanikowi bytu.
+\end{enumerate}
+\section{Formalizacja}
+Hipergraf: $H = (V, E, \Delta, \mu)$, gdzie $\mu = f(\nabla P, \Sigma_{\text{warp}})$. \\
+Prawdopodobieństwo przeskoku:
+\[
+P(\Delta) = \sigma\left( \frac{\nabla_{\text{warp}} - 9.71 \cdot 10^{-18}}{10^{-18}} \right) \cdot \sigma\left( \frac{\Sigma_c - 1.6094}{0.2} \right)
+\]
+\end{document}
