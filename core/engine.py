@@ -2,7 +2,29 @@ import numpy as np
 from .metrics import P_delta, calc_delta_t, assign_attrs
 from .topology import update_hypergraph
 
-def simulate_step(H, grad_warp, sigma_c, step):
+def simulate_step(H, grad_warp, sigma_c, step, seed=None):
+    if seed is not None:
+        np.random.seed(seed)
+    """
+    Symuluje pojedynczy krok Δ w hipergrafie romionowym.
+    Args:
+        H (hnx.Hypergraph): Hipergraf do aktualizacji.
+        grad_warp (float): Gradient presji warp [m^-1].
+        sigma_c (float): Entropia topologiczna.
+        step (int): Numer kroku symulacji.
+    Returns:
+        dict: Zdarzenie z kluczami 'type', 'delta_t', 'P_delta', 'attrs'.
+    Raises:
+        ValueError: Jeśli wejścia są niepoprawne.
+    """
+    if not isinstance(grad_warp, (int, float)) or grad_warp < 0:
+        raise ValueError("grad_warp musi być nieujemną liczbą.")
+    if not isinstance(grad_warp, (int, float)) or grad_warp < 0:
+        raise ValueError("grad_warp musi być nieujemną liczbą.")
+    if not isinstance(sigma_c, (int, float)) or sigma_c < 0:
+        raise ValueError("sigma_c musi być nieujemną liczbą.")
+    if not isinstance(step, int) or step < 0:
+        raise ValueError("step musi być nieujemną liczbą całkowitą.")
     """Symuluje pojedynczy krok Δ."""
     p = P_delta(grad_warp, sigma_c)
     if np.random.rand() < p:
